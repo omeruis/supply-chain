@@ -10,7 +10,7 @@ import "../coffeecore/Ownable.sol";
 contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole, Ownable {
 
   // Define 'owner'
-  address owner;
+  // address owner;
 
   // Define a variable called 'upc' for Universal Product Code (UPC)
   uint  upc;
@@ -70,10 +70,10 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole,
   event Purchased(uint upc);
 
   // Define a modifer that checks to see if msg.sender == owner of the contract
-  modifier onlyOwner() {
-    require(msg.sender == owner);
-    _;
-  }
+  // modifier onlyOwner() {
+  //  require(msg.sender == owner);
+  //  _;
+  // }
 
   // Define a modifer that verifies the Caller
   modifier verifyCaller (address _address) {
@@ -147,15 +147,15 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole,
   // and set 'sku' to 1
   // and set 'upc' to 1
   constructor() public payable {
-    owner = msg.sender;
+    // owner = msg.sender;
     sku = 1;
     upc = 1;
   }
 
   // Define a function 'kill' if required
   function kill() public {
-    if (msg.sender == owner) {
-      selfdestruct(owner);
+    if (msg.sender == owner()) {
+      selfdestruct(owner());
     }
   }
 
@@ -163,7 +163,7 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole,
   function harvestItem(uint _upc, address _originFarmerID, string _originFarmName, string _originFarmInformation, string  _originFarmLatitude, string  _originFarmLongitude, string  _productNotes) public onlyFarmer
   {
     // Add the new item as part of Harvest
-    Item memory item = Item({
+    items[_upc] = Item({
        sku: sku,
         upc: _upc,
         ownerID: _originFarmerID,
@@ -230,7 +230,6 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole,
     // Update the appropriate fields
     items[_upc].itemState = State.ForSale;
     items[_upc].productPrice = _price;
-    
     // Emit the appropriate event
     emit ForSale(_upc);
   }
@@ -255,7 +254,6 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole,
 
     // Transfer money to farmer
     items[_upc].originFarmerID.transfer(items[_upc].productPrice);
-
     // emit the appropriate event
     emit Sold(_upc);
   }
