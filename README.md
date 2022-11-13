@@ -110,3 +110,37 @@ See also the list of [contributors](https://github.com/your/project/contributors
 * Ganache-cli
 * Truffle
 * IPFS
+
+
+https://goerli.etherscan.io/address/0xc9944d68f74e5a327b714d0abc341a11a93c4940
+
+blackwell@MBP-de-Omer project-6 % truffle migrate --network goerli
+Using network 'goerli'.
+
+Running migration: 1_initial_migration.js
+  Deploying Migrations...
+  ... 0x164abbb3a1b9b83ee21596e7aa979eea21c42972fb652e10a16dcf22e1084675
+  Migrations: 0xf2c95651aabf1e1f56f681659e9ebaab3298ce59
+Saving successful migration to network...
+  ... 0x98e83ffebb7407038c69e07498f698f843c6d872a24e936c7fb6bd6a01527dc3
+Saving artifacts...
+Running migration: 2_deploy_contracts.js
+  Deploying FarmerRole...
+  ... 0xaa5726da75b7ab421c0179e1c17c0b46f98418dd764cd7edbc8ea53f6c0d0fa6
+  FarmerRole: 0xc663fcac7106510909b2f9b3ca86d6d868e07742
+  Deploying DistributorRole...
+  ... 0x7e26fe8250ec4f1686fbe4161b1382734b2314bf5c1ecb57fc99212370074b77
+  DistributorRole: 0x365ad1f419f5db15ae3df0aadf6baf9d594cce44
+  Deploying RetailerRole...
+  ... 0x8738c882607fb37b3c1ad6bc72e35e159dd9b80e22181c817a454f1fb9026ced
+  RetailerRole: 0xbc958d8ee41da962923d3e2a0f525688f5c88501
+  Deploying ConsumerRole...
+  ... 0xc1cdf2af8682b3dfac13b11e47a35332436407b744adc8f623484d2572474567
+  ConsumerRole: 0x748ca2ca20b374e49b5e12e77849815dd154f875
+  Deploying SupplyChain...
+  ... 0x77fbe4dab97b3977afbf5006adc3dc5f396a61cda69a2fd48f62f6c2774466f0
+  SupplyChain: 0xc9944d68f74e5a327b714d0abc341a11a93c4940
+Saving successful migration to network...
+  ... 0xa37ca1e119c753a0c6894aa41e7b2a31804d58d7c6f16661003edff6d3897cbb
+Saving artifacts...
+blackwell@MBP-de-Omer project-6 % 
