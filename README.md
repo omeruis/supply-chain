@@ -2,8 +2,37 @@
 
 This repository containts an Ethereum DApp that demonstrates a Supply Chain flow between a Seller and Buyer. The user story is similar to any commonly used supply chain process. A Seller can add items to the inventory system stored in the blockchain. A Buyer can purchase such items from the inventory system. Additionally a Seller can mark an item as Shipped, and similarly a Buyer can mark an item as Received.
 
-The DApp User Interface when running should look like...
+# The contract Infos
 
+* Contract Address : [0xcb6f83595481855fc8407be8b83802a09b22ce89](https://goerli.etherscan.io/address/0xcb6f83595481855fc8407be8b83802a09b22ce89)
+* Transaction ID : [0x8cb6dd6a464eb2c6bde423175e8396899f1a59d8b1c8b484fb89f471a4c99112](https://goerli.etherscan.io/tx/0x8cb6dd6a464eb2c6bde423175e8396899f1a59d8b1c8b484fb89f471a4c99112)
+
+
+# Project write-up - Libraries & version
+* Truffle-hd-wallet-provider ```1.0.6```
+* Truffle ```v4.1.14 (core: 4.1.14)```
+* Solidity ```v0.4.24 (solc-js)```
+* Ganache CLI ```v6.12.2 (ganache-core: 2.13.2)```
+* Node ```v16.13.2```
+
+# Project write-up - UML
+## Sequence
+![truffle test](uml/sequence-diagram.png)
+
+## Activity
+![truffle test](uml/Activity-diagram.png)
+
+## State
+![truffle test](uml/state-diagram.png)
+
+## Class
+![truffle test](uml/class-diagram.png)
+
+
+# IPFS
+No IPFS used in this project
+
+# Front End
 ![truffle test](images/ftc_product_overview.png)
 
 ![truffle test](images/ftc_farm_details.png)
@@ -95,52 +124,15 @@ npm run dev
 ## Built With
 
 * [Ethereum](https://www.ethereum.org/) - Ethereum is a decentralized platform that runs smart contracts
-* [IPFS](https://ipfs.io/) - IPFS is the Distributed Web | A peer-to-peer hypermedia protocol
-to make the web faster, safer, and more open.
 * [Truffle Framework](http://truffleframework.com/) - Truffle is the most popular development framework for Ethereum with a mission to make your life a whole lot easier.
 
 
 ## Authors
 
-See also the list of [contributors](https://github.com/your/project/contributors.md) who participated in this project.
-
+[Omer NAPPORN](https://github.com/omeruis) 
 ## Acknowledgments
 
 * Solidity
 * Ganache-cli
 * Truffle
 * IPFS
-
-
-https://goerli.etherscan.io/address/0xc9944d68f74e5a327b714d0abc341a11a93c4940
-
-blackwell@MBP-de-Omer project-6 % truffle migrate --network goerli
-Using network 'goerli'.
-
-Running migration: 1_initial_migration.js
-  Deploying Migrations...
-  ... 0x164abbb3a1b9b83ee21596e7aa979eea21c42972fb652e10a16dcf22e1084675
-  Migrations: 0xf2c95651aabf1e1f56f681659e9ebaab3298ce59
-Saving successful migration to network...
-  ... 0x98e83ffebb7407038c69e07498f698f843c6d872a24e936c7fb6bd6a01527dc3
-Saving artifacts...
-Running migration: 2_deploy_contracts.js
-  Deploying FarmerRole...
-  ... 0xaa5726da75b7ab421c0179e1c17c0b46f98418dd764cd7edbc8ea53f6c0d0fa6
-  FarmerRole: 0xc663fcac7106510909b2f9b3ca86d6d868e07742
-  Deploying DistributorRole...
-  ... 0x7e26fe8250ec4f1686fbe4161b1382734b2314bf5c1ecb57fc99212370074b77
-  DistributorRole: 0x365ad1f419f5db15ae3df0aadf6baf9d594cce44
-  Deploying RetailerRole...
-  ... 0x8738c882607fb37b3c1ad6bc72e35e159dd9b80e22181c817a454f1fb9026ced
-  RetailerRole: 0xbc958d8ee41da962923d3e2a0f525688f5c88501
-  Deploying ConsumerRole...
-  ... 0xc1cdf2af8682b3dfac13b11e47a35332436407b744adc8f623484d2572474567
-  ConsumerRole: 0x748ca2ca20b374e49b5e12e77849815dd154f875
-  Deploying SupplyChain...
-  ... 0x77fbe4dab97b3977afbf5006adc3dc5f396a61cda69a2fd48f62f6c2774466f0
-  SupplyChain: 0xc9944d68f74e5a327b714d0abc341a11a93c4940
-Saving successful migration to network...
-  ... 0xa37ca1e119c753a0c6894aa41e7b2a31804d58d7c6f16661003edff6d3897cbb
-Saving artifacts...
-blackwell@MBP-de-Omer project-6 % 

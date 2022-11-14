@@ -17,6 +17,19 @@
     </div>
 
     <div id="ftc-harvest">
+        <h2>Add New User</h2>
+        <div class="form-group">
+            Account Address
+            <br>
+            <input type="text" id="account" name="account" placeholder="0x27d8d15cbc94527cadf5ec14b69519ae23288b95"><br>
+            <div class=button-div>
+                <button class="btn-fetchOne" id="btnFarmer" type="button" data-id="11" data-toggle="tooltip" title="Add New Farmer">Farmer</button>
+                <button class="btn-fetchTwo" id="btnDistributor" type="button" data-id="12" data-toggle="tooltip" title="Add New Distributor">Distributor</button>
+                <button class="btn-fetchOne" id="btnRetailer" type="button" data-id="13" data-toggle="tooltip" title="Add New Retailer">Retailer</button>
+                <button class="btn-fetchTwo" id="btnConsumer" type="button" data-id="14" data-toggle="tooltip" title="Add New Consumer">Consumer</button>
+            </div>
+        </div>
+        <div class=form-break></div>
         <h2>Product Overview</h2>
         <div class="form-group">
             SKU
@@ -100,7 +113,7 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- <script src="js/web3.min.js"></script> -->
+    <script src="js/web3.min.js"></script>
     <script src="src/js/truffle-contract.js"></script>
     <script src="src/js/app.js"></script>
 </body>
